@@ -1,4 +1,4 @@
-package com.company;
+package com.main;
 
 import javax.swing.*;
 
