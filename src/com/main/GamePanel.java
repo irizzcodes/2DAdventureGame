@@ -8,8 +8,8 @@ import java.awt.*;
 // function as game screen
 public class GamePanel extends JPanel implements Runnable{
     //Screen Settings
-    final int originalTileSize = 16; // this is 16x16 tile
-    final int scale = 3; // scale our 16x16, to make it larger on screen
+    final int originalTileSize = 32; // this is 32x32 tile
+    final int scale = 2; // scale our 32x32, to make it larger on screen
     public final int tileSize = originalTileSize * scale; // this is now the actual tile size
 
     // 4x3 ratio
