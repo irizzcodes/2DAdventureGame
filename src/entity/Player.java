@@ -31,7 +31,14 @@ public class Player extends Entity{
     public void getPlayerImage(){
         try{
             //UP
-            up1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_left_1.png"));
+            up1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_1.png"));
+            up2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_2.png"));
+            up3 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_3.png"));
+            up4 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_4.png"));
+            up5 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_5.png"));
+            up6 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_6.png"));
+            up7 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_7.png"));
+            up8 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_8.png"));
             //DOWN
             down1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_right_1.png"));
             //LEFT
@@ -74,7 +81,7 @@ public class Player extends Entity{
             }
 
             spriteCounter++;
-            if (spriteCounter > 9) {
+            if (spriteCounter > 8) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
                 } else if (spriteNum == 2) {
@@ -149,7 +156,25 @@ public class Player extends Entity{
                     image = up1;
                 }
                 if(spriteNum == 2){
-                    image = up1;
+                    image = up2;
+                }
+                if(spriteNum == 3){
+                    image = up3;
+                }
+                if(spriteNum == 4){
+                    image = up4;
+                }
+                if(spriteNum == 5){
+                    image = up5;
+                }
+                if(spriteNum == 6){
+                    image = up6;
+                }
+                if(spriteNum == 7){
+                    image = up7;
+                }
+                if(spriteNum == 8){
+                    image = up8;
                 }
                 break;
             case "down":
