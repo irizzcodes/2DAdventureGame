@@ -58,52 +58,85 @@ public class Player extends Entity{
         }
     }
     public void update(){
-        if (keyH.upPressed == true){
-            direction = "up";
-            y -= speed; // playerY = playerY - playerSpeed
-        }
-        else if (keyH.downPressed == true){
-            direction = "down";
-            y += speed;
-        }
-        else if (keyH.leftPressed == true){
-            direction = "left";
-            x -= speed;
-        }
-        else if (keyH.rightPressed == true){
-            direction = "right";
-            x += speed;
-        }
+        if (keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed) {
+            if (keyH.upPressed == true) {
+                direction = "up";
+                y -= speed; // playerY = playerY - playerSpeed
+            } else if (keyH.downPressed == true) {
+                direction = "down";
+                y += speed;
+            } else if (keyH.leftPressed == true) {
+                direction = "left";
+                x -= speed;
+            } else if (keyH.rightPressed == true) {
+                direction = "right";
+                x += speed;
+            }
 
-        spriteCounter++;
-        if (spriteCounter > 9){
-            if (spriteNum == 1){
-                spriteNum = 2;
+            spriteCounter++;
+            if (spriteCounter > 9) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 3;
+                } else if (spriteNum == 3) {
+                    spriteNum = 4;
+                } else if (spriteNum == 4) {
+                    spriteNum = 5;
+                } else if (spriteNum == 5) {
+                    spriteNum = 6;
+                } else if (spriteNum == 6) {
+                    spriteNum = 7;
+                } else if (spriteNum == 7) {
+                    spriteNum = 8;
+                } else if (spriteNum == 8) {
+                    spriteNum = 1;
+                }
+                spriteCounter = 0;
             }
-            else if (spriteNum == 2){
-                spriteNum = 3;
-            }
-            else if (spriteNum == 3){
-                spriteNum = 4;
-            }
-            else if (spriteNum == 4){
-                spriteNum = 5;
-            }
-            else if (spriteNum == 5){
-                spriteNum = 6;
-            }
-            else if (spriteNum == 6){
-                spriteNum = 7;
-            }
-            else if (spriteNum == 7){
-                spriteNum = 8;
-            }
-            else if (spriteNum == 8){
-                spriteNum = 1;
-            }
-            spriteCounter = 0;
         }
-
+        else if (direction == "left" && !keyH.upPressed){
+            spriteCounter++;
+            if (spriteCounter > 14) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 1;
+                } else if (spriteNum == 3) {
+                    spriteNum = 1;
+                } else if (spriteNum == 4) {
+                    spriteNum = 1;
+                } else if (spriteNum == 5) {
+                    spriteNum = 1;
+                } else if (spriteNum == 7) {
+                    spriteNum = 1;
+                } else if (spriteNum == 8) {
+                    spriteNum = 1;
+                }
+                spriteCounter = 0;
+            }
+        }
+        else if (direction == "right" && !keyH.upPressed){
+            spriteCounter++;
+            if (spriteCounter > 14) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 1;
+                } else if (spriteNum == 3) {
+                    spriteNum = 1;
+                } else if (spriteNum == 4) {
+                    spriteNum = 1;
+                } else if (spriteNum == 5) {
+                    spriteNum = 1;
+                } else if (spriteNum == 7) {
+                    spriteNum = 1;
+                } else if (spriteNum == 8) {
+                    spriteNum = 1;
+                }
+                spriteCounter = 0;
+            }
+        }
     }
     public void draw(Graphics2D g2){
         //g2.setColor(Color.white); color of rectangle
