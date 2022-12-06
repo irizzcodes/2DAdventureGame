@@ -40,7 +40,14 @@ public class Player extends Entity{
             up7 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_7.png"));
             up8 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_up_8.png"));
             //DOWN
-            down1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_right_1.png"));
+            down1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_1.png"));
+            down2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_2.png"));
+            down3 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_3.png"));
+            down4 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_4.png"));
+            down5 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_5.png"));
+            down6 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_6.png"));
+            down7 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_7.png"));
+            down8 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_down_8.png"));
             //LEFT
             left1 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_left_1.png"));
             left2 = ImageIO.read(getClass().getClassLoader().getResourceAsStream("player/player_left_2.png"));
@@ -180,6 +187,27 @@ public class Player extends Entity{
             case "down":
                 if(spriteNum == 1) {
                     image = down1;
+                }
+                if(spriteNum == 2) {
+                    image = down2;
+                }
+                if(spriteNum == 3) {
+                    image = down3;
+                }
+                if(spriteNum == 4) {
+                    image = down4;
+                }
+                if(spriteNum == 5) {
+                    image = down5;
+                }
+                if(spriteNum == 6) {
+                    image = down6;
+                }
+                if(spriteNum == 7) {
+                    image = down7;
+                }
+                if(spriteNum == 8) {
+                    image = down8;
                 }
                 break;
             case "left":
