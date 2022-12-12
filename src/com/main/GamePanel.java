@@ -13,6 +13,12 @@ public class GamePanel extends JPanel implements Runnable{
     final int scale = 2; // scale our 32x32, to make it larger on screen
     public final int tileSize = originalTileSize * scale; // this is now the actual tile size
 
+    //World Settings
+    public final int maxWorldCol = 50;
+    public final int maxWorldRow = 50;
+    public final int worldWidth = tileSize * maxWorldCol;
+    public final int worldHeight = tileSize * maxWorldRow;
+
     // 4x3 ratio
     public final int maxScreenCol = 16;
     public final int maxscreenRow = 12;
@@ -25,7 +31,7 @@ public class GamePanel extends JPanel implements Runnable{
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
     Thread gameThread; // to repeat process again and again every 1 second
-    Player player = new Player(this,keyH);
+    public Player player = new Player(this,keyH);
 
     public GamePanel(){
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
